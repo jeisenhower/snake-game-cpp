@@ -68,13 +68,13 @@ void Snake::move() {
   // Check if the snake is out of bounds. If it is, move it back into window on opposite side
   if (head_x >= width) {
     head_x = 0;
-  } else if (head_x <= 0) {
+  } else if (head_x < 0) {
     //head_x = width-piece_size;
     head_x = width;
   }
   if (head_y >= height) {
     head_y = 0;
-  } else if (head_y <= 0) {
+  } else if (head_y < 0) {
     //head_y = height - piece_size;
     head_y = height;
   }
@@ -82,14 +82,14 @@ void Snake::move() {
   for (int i=0; i<length; i++) {
     if (x[i] >= width) {
       x[i] = 0;
-    } else if (x[i] <= 0) {
+    } else if (x[i] < 0) {
       //x[i] = width - piece_size;
       x[i] = width;
     }
     
     if (y[i] >= height) {
       y[i] = 0;
-    } else if (y[i] <= 0) {
+    } else if (y[i] < 0) {
       //y[i] = height - piece_size;
       y[i] = height;
     }

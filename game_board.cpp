@@ -121,7 +121,7 @@ void GameBoard::play() {
         window.display();
 
         // Set a delay before next loop iteration begins
-        std::this_thread::sleep_for(std::chrono::milliseconds(60));
+        std::this_thread::sleep_for(std::chrono::milliseconds(55));
     }
 
     if (game_over) {
