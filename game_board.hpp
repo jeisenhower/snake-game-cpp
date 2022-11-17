@@ -1,6 +1,12 @@
 #include "snake.hpp"
 #include <SFML/Graphics.hpp>
 
+// Possible improvements: Create a buffer that listens and stores key pressed events on a different thread so we can just pull from the 
+// buffer in order to make the snake more consistently responsive. Maybe consider using interrupts on a separate thread along with the buffer?
+// Or maybe even just set it so that the interrupt changes the direction of the snake. I am not sure how this would affect performance of the
+// rest of the project, though. Need to look into how to set up interrupts and multithread this.
+
+
 class GameBoard {
     Snake snake;
     int height = 600;
