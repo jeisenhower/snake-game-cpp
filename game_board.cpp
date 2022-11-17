@@ -114,7 +114,8 @@ void GameBoard::play() {
         }
 
         // Draw fruit on board
-        sf::RectangleShape fruit(sf::Vector2f(piece_size, piece_size));
+        //sf::RectangleShape fruit(sf::Vector2f(piece_size, piece_size));
+        sf::CircleShape fruit(piece_size/2);
         fruit.setFillColor(sf::Color::Red);
         fruit.setPosition(snake.fruit_x, snake.fruit_y);
         window.draw(fruit);
